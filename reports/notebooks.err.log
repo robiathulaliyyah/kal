@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "C:\Users\ACER\AppData\Roaming\Python\Python313\site-packages\jupyter_core\utils\__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python313\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+    ~~~~~~~~~^
+        nb,
+        ^^^
+    ...<4 lines>...
+        **kwargs,
+        ^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ACER\AppData\Roaming\Python\Python313\site-packages\nbclient\client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Roaming\Python\Python313\site-packages\jupyter_core\utils\__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Python313\Lib\asyncio\base_events.py", line 725, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "C:\Users\ACER\AppData\Roaming\Python\Python313\site-packages\nbclient\client.py", line 709, in async_execute
+    await self.async_execute_cell(
+        cell, index, execution_count=self.code_cells_executed + 1
+    )
+  File "C:\Users\ACER\AppData\Roaming\Python\Python313\site-packages\nbclient\client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\ACER\AppData\Roaming\Python\Python313\site-packages\nbclient\client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+Definisi 1.1.1. Persamaan linier.  Ekspresi linier dalam 
+ tidak diketahui (atau variabel) 
+ adalah ekspresi dari bentuk
+,
+🔗di mana 
+ adalah bilangan real tetap.
+🔗
+🔗Persamaan linier dalam hal yang tidak diketahui 
+ adalah persamaan yang dapat disederhanakan, hanya dengan menggunakan penjumlahan dan pengurangan, ke persamaan bentuk
+ 
+(1.1.1)
+🔗yang kami sebut bentuk standarnya. Persamaan dalam hal yang tidak diketahui 
+ nonlinier jika tidak dapat disederhanakan ke bentuk (1.1.1) hanya menggunakan penjumlahan dan pengurangan.
+🔗Diberi persamaan linier dengan bentuk standar (1.1.1), persamaan disebut homogen jika ,
+ dan tidak homogen jika .
+------------------
+
+
+  [36mCell[39m[36m [39m[32mIn[1][39m[32m, line 5[39m
+[31m    [39m[31m🔗di mana[39m
+    ^
+[31mSyntaxError[39m[31m:[39m invalid character '🔗' (U+1F517)
+
+

@@ -1,0 +1,1810 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>SISTEM PERSAMAAN LINEAR &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="SISTEM PERSAMAAN LINIER" href="markdown.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">SISTEM PERSAMAAN LINIER</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">SISTEM PERSAMAAN LINEAR</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebooks.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>SISTEM PERSAMAAN LINEAR</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SISTEM PERSAMAAN LINEAR</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1 Sistem Persamaan Linear</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.1.1 Sistem Persamaan Linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-1-1-1-persamaan-linear"><strong>Definisi 1.1.1 Persamaan Linear</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-standar"><strong>Bentuk Standar</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-persamaan"><strong>Klasifikasi Persamaan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-linier">1.1.2. Contoh Persamaan Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-linier-satu-variabel">1. Persamaan Linier Satu Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-linier-dua-variabel">2. Persamaan Linier Dua Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linier">3. Sistem Persamaan Linier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-nonlinier">Contoh Persamaan Nonlinier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-nonlinier-satu-variabel">1. Persamaan Nonlinier Satu Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-nonlinier-dua-variabel">2. Persamaan Nonlinier Dua Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-nonlinier-dengan-fungsi">3. Persamaan Nonlinier dengan Fungsi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-1-1-3-sistem-persamaan-linear"><strong>Definisi 1.1.3: Sistem Persamaan Linear</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-standar"><strong>Representasi Standar</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-1-1-5-solusi-sistem-linear"><strong>Definisi 1.1.5: Solusi Sistem Linear</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-himpunan-penyelesaian"><strong>Jenis-Jenis Himpunan Penyelesaian</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-1-6-analisis-geometris"><strong>Contoh 1.1.6: Analisis Geometris</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-sistem-pertama"><strong>a. Sistem Pertama</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-sistem-kedua"><strong>b. Sistem Kedua</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-sistem-ketiga"><strong>c. Sistem Ketiga</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-penyelesaian-sistem-persamaan-linear">🧮 Metode Penyelesaian Sistem Persamaan Linear</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-substitusi">1. Metode Substitusi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-eliminasi">2. Metode Eliminasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-matriks-eliminasi-gauss">3. Metode Matriks (Eliminasi Gauss)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-matriks-augmented">Bentuk Matriks Augmented</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris">Operasi Baris</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aturan-cramer">4. Aturan Cramer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-koefisien">Matriks Koefisien</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan">Determinan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-x-dan-y">Hitung (x) dan (y)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-numerik-iterasi-jacobi">5. Metode Numerik (Iterasi – Jacobi)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-awal">Iterasi Awal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-1">Iterasi 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-2">Iterasi 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-matriks-eliminasi-gauss">📘 Representasi Matriks &amp; Eliminasi Gauss</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-matriks">1. Representasi Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented">2. Matriks Augmented</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">3. Eliminasi Gauss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-umum">Langkah-langkah umum:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-eliminasi-gauss">4. Tujuan Eliminasi Gauss</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">5. Kesimpulan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-tahapan-penyelesaian">📘 Contoh Tahapan Penyelesaian</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-awal">Sistem Persamaan Awal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-1-menukar-urutan-persamaan">Tahap 1: Menukar Urutan Persamaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-2-mengalikan-persamaan">Tahap 2: Mengalikan Persamaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-3-menjumlahkan-persamaan">Tahap 3: Menjumlahkan Persamaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-baru">Sistem Persamaan Baru</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan">1. Sistem Persamaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-langkah-demi-langkah">2. Solusi Langkah-demi-Langkah</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linear">
+<h1>SISTEM PERSAMAAN LINEAR<a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
+<p><strong>Nama</strong>   :  ROBI’ATHUL ALIYYAH</p>
+<p><strong>NIM</strong>    :  250411100189</p>
+<p><strong>Kelas</strong>  :  2D</p>
+<p><strong>Mata Kuliah</strong> :  KOMPUTASI ALJABAR LINIER</p>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>1.1 Sistem Persamaan Linear<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>Perhitungan dan studi solusi persamaan, khususnya <strong>sistem persamaan</strong>, memiliki peran yang sangat penting dalam matematika. Meskipun demikian, ini bukan satu-satunya fokus kajian para matematikawan.</p>
+<p>Pada bab ini, akan dikembangkan teori yang hampir lengkap mengenai salah satu jenis persamaan matematika yang paling sederhana, yaitu <strong>persamaan linear</strong>. Pembahasan ini berfungsi sebagai pengantar tidak langsung menuju <strong>aljabar linear</strong>.</p>
+<p>Melalui deskripsi parametrik solusi sistem linear, akan diperkenalkan konsep-konsep dasar dalam aljabar linear, antara lain:</p>
+<ul class="simple">
+<li><p><strong>Ruang vektor</strong></p></li>
+<li><p><strong>Subruang</strong></p></li>
+<li><p><strong>Rentang (span)</strong></p></li>
+<li><p><strong>Kebebasan linear</strong></p></li>
+</ul>
+<p>Selain itu, bab ini juga memperkenalkan salah satu alat komputasi terpenting dalam aljabar linear, yaitu <strong>eliminasi Gauss</strong>, yang digunakan untuk menyelesaikan sistem persamaan linear secara sistematis.</p>
+<section id="id2">
+<h2>1.1.1 Sistem Persamaan Linear<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<section id="definisi-1-1-1-persamaan-linear">
+<h3><strong>Definisi 1.1.1 Persamaan Linear</strong><a class="headerlink" href="#definisi-1-1-1-persamaan-linear" title="Link to this heading">#</a></h3>
+<p>Sebuah <strong>ekspresi linear</strong> dalam <span class="math notranslate nohighlight">\(n\)</span> variabel (<span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_n\)</span>) adalah ungkapan matematika yang memiliki bentuk:</p>
+<div class="math notranslate nohighlight">
+\[a_1x_1 + a_2x_2 + \dots + a_nx_n\]</div>
+<p>Di mana <span class="math notranslate nohighlight">\(a_1, a_2, \dots, a_n\)</span> merupakan bilangan real tetap (konstanta).</p>
+</section>
+<section id="bentuk-standar">
+<h3><strong>Bentuk Standar</strong><a class="headerlink" href="#bentuk-standar" title="Link to this heading">#</a></h3>
+<p>Persamaan linear adalah persamaan yang dapat disederhanakan (menggunakan penjumlahan dan pengurangan) menjadi <strong>bentuk standar</strong> berikut:</p>
+<div class="math notranslate nohighlight">
+\[a_1x_1 + a_2x_2 + \dots + a_nx_n = b\]</div>
+<blockquote>
+<div><p><strong>Catatan:</strong> Jika sebuah fungsi tidak dapat disederhanakan ke dalam bentuk standar di atas hanya dengan operasi penjumlahan dan pengurangan, maka fungsi tersebut dikategorikan sebagai <strong>nonlinier</strong>.</p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="klasifikasi-persamaan">
+<h3><strong>Klasifikasi Persamaan</strong><a class="headerlink" href="#klasifikasi-persamaan" title="Link to this heading">#</a></h3>
+<p>Berdasarkan nilai konstanta <span class="math notranslate nohighlight">\(b\)</span> pada bentuk standar, persamaan linear dibedakan menjadi dua jenis:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Jenis Persamaan</p></th>
+<th class="head"><p>Syarat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Homogen</strong></p></td>
+<td><p>Jika nilai <span class="math notranslate nohighlight">\(b = 0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tidak Homogen</strong></p></td>
+<td><p>Jika nilai <span class="math notranslate nohighlight">\(b \neq 0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contoh-persamaan-linier">
+<h2>1.1.2. Contoh Persamaan Linier<a class="headerlink" href="#contoh-persamaan-linier" title="Link to this heading">#</a></h2>
+<p>Persamaan linier adalah persamaan yang setiap variabelnya berpangkat satu dan tidak saling dikalikan.</p>
+<section id="persamaan-linier-satu-variabel">
+<h3>1. Persamaan Linier Satu Variabel<a class="headerlink" href="#persamaan-linier-satu-variabel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>( 2x + 5 = 9 )</p></li>
+<li><p>( 7y - 3 = 11 )</p></li>
+</ul>
+<p align="center">
+  <img src="satu variabel.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># a). Persamaan: 2x + 5 = 9</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">9</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nilai x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nilai x = 2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># b). Persamaan: 7y - 3 = 11</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span> <span class="o">+</span> <span class="mi">3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Nilai y =&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nilai y = 2.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="persamaan-linier-dua-variabel">
+<h3>2. Persamaan Linier Dua Variabel<a class="headerlink" href="#persamaan-linier-dua-variabel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>( x + y = 10 )</p></li>
+<li><p>( 2x - 3y = 5 )</p></li>
+</ul>
+<p align="center">
+  <img src="dua.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Persamaan: x + y = 10</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">-</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;, y =&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 4 , y = 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Persamaan: 2x - 3y = 5</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">&quot;, y =&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 4 , y = 1.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sistem-persamaan-linier">
+<h3>3. Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>( x + y = 6 )</p></li>
+<li><p>( 2x - y = 4 )</p></li>
+</ul>
+<p align="center">
+  <img src="tiga.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sistem persamaan:</span>
+<span class="c1"># x + y = 6</span>
+<span class="c1"># 2x - y = 4</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="mi">6</span> <span class="o">+</span> <span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">-</span> <span class="n">x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y =&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 3.3333333333333335
+y = 2.6666666666666665
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># Definisi variabel</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Definisi persamaan</span>
+<span class="n">persamaan1</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">6</span>
+<span class="n">persamaan2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">4</span>
+
+<span class="c1"># Menyelesaikan sistem</span>
+<span class="n">solusi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">((</span><span class="n">persamaan1</span><span class="p">,</span> <span class="n">persamaan2</span><span class="p">),</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi:&quot;</span><span class="p">,</span> <span class="n">solusi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solusi: {x: 10/3, y: 8/3}
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="contoh-persamaan-nonlinier">
+<h2>Contoh Persamaan Nonlinier<a class="headerlink" href="#contoh-persamaan-nonlinier" title="Link to this heading">#</a></h2>
+<p>Persamaan nonlinier adalah persamaan yang <strong>tidak memenuhi</strong> syarat linier, misalnya variabel berpangkat lebih dari satu, saling dikalikan, atau berada di dalam fungsi tertentu.</p>
+<section id="persamaan-nonlinier-satu-variabel">
+<h3>1. Persamaan Nonlinier Satu Variabel<a class="headerlink" href="#persamaan-nonlinier-satu-variabel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>( x^2 + 3x - 4 = 0 )</p></li>
+<li><p>√x + 2 = 6</p></li>
+</ul>
+<p align="center">
+  <img src="non.png" width="450">
+</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># Definisi variabel</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># Persamaan</span>
+<span class="n">persamaan</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span>
+
+<span class="c1"># Menyelesaikan persamaan</span>
+<span class="n">solusi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">persamaan</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi x =&quot;</span><span class="p">,</span> <span class="n">solusi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solusi x = [-4, 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># Persamaan sqrt(x) + 2 = 6</span>
+<span class="n">persamaan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">6</span>
+
+<span class="n">solusi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">persamaan</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi x =&quot;</span><span class="p">,</span> <span class="n">solusi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solusi x = [16]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="persamaan-nonlinier-dua-variabel">
+<h3>2. Persamaan Nonlinier Dua Variabel<a class="headerlink" href="#persamaan-nonlinier-dua-variabel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>( xy = 8 )</p></li>
+<li><p>( x^2 + y = 5 )</p></li>
+</ul>
+<p align="center">
+  <img src="xy.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Persamaan</span>
+<span class="n">persamaan</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">-</span> <span class="mi">8</span>
+
+<span class="c1"># Contoh solusi (misal x = 2)</span>
+<span class="n">nilai_x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">nilai_y</span> <span class="o">=</span> <span class="mi">8</span> <span class="o">/</span> <span class="n">nilai_x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jika x =&quot;</span><span class="p">,</span> <span class="n">nilai_x</span><span class="p">,</span> <span class="s2">&quot;maka y =&quot;</span><span class="p">,</span> <span class="n">nilai_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jika x = 2 maka y = 4.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y&#39;</span><span class="p">)</span>
+
+<span class="c1"># Persamaan</span>
+<span class="n">persamaan</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">-</span> <span class="mi">5</span>
+
+<span class="c1"># Nyatakan y dalam x</span>
+<span class="n">y_dalam_x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">persamaan</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y =&quot;</span><span class="p">,</span> <span class="n">y_dalam_x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y = [5 - x**2]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="persamaan-nonlinier-dengan-fungsi">
+<h3>3. Persamaan Nonlinier dengan Fungsi<a class="headerlink" href="#persamaan-nonlinier-dengan-fungsi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>( \sin x = 0.5 )</p></li>
+<li><p>( e^x = 3 )</p></li>
+</ul>
+<p align="center">
+  <img src="iya.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># Persamaan sin(x) = 0.5</span>
+<span class="n">persamaan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span>
+
+<span class="n">solusi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">persamaan</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi x =&quot;</span><span class="p">,</span> <span class="n">solusi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solusi x = [0.523598775598299, 2.61799387799149]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+
+<span class="c1"># Persamaan e^x = 3</span>
+<span class="n">persamaan</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">3</span>
+
+<span class="n">solusi</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">persamaan</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Solusi x =&quot;</span><span class="p">,</span> <span class="n">solusi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Solusi x = [log(3)]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="definisi-1-1-3-sistem-persamaan-linear">
+<h2><strong>Definisi 1.1.3: Sistem Persamaan Linear</strong><a class="headerlink" href="#definisi-1-1-3-sistem-persamaan-linear" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Sistem Persamaan Linear (Sistem Linear):</strong> Adalah himpunan dari satu atau lebih persamaan linear.</p></li>
+<li><p><strong>Sistem Linear Homogen:</strong> Adalah himpunan persamaan linear di mana setiap persamaannya merupakan persamaan linear homogen (semua konstanta di sisi kanan adalah nol).</p></li>
+</ul>
+<section id="representasi-standar">
+<h3><strong>Representasi Standar</strong><a class="headerlink" href="#representasi-standar" title="Link to this heading">#</a></h3>
+<p>Untuk sistem dengan <span class="math notranslate nohighlight">\(m\)</span> persamaan dan <span class="math notranslate nohighlight">\(n\)</span> variabel (<span class="math notranslate nohighlight">\(x_1, x_2, \dots, x_n\)</span>), suku-suku disusun dalam kolom yang sejajar:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{matrix}
+a_{11}x_1 &amp; + &amp; a_{12}x_2 &amp; + \dots + &amp; a_{1n}x_n &amp; = &amp; b_1 \\
+a_{21}x_1 &amp; + &amp; a_{22}x_2 &amp; + \dots + &amp; a_{2n}x_n &amp; = &amp; b_2 \\
+\vdots &amp; &amp; \vdots &amp; &amp; \vdots &amp; &amp; \vdots \\
+a_{m1}x_1 &amp; + &amp; a_{m2}x_2 &amp; + \dots + &amp; a_{mn}x_n &amp; = &amp; b_m
+\end{matrix}\end{split}\]</div>
+<p>Untuk <strong>sistem homogen</strong>, nilai <span class="math notranslate nohighlight">\(b_1, b_2, \dots, b_m\)</span> semuanya adalah <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="definisi-1-1-5-solusi-sistem-linear">
+<h2><strong>Definisi 1.1.5: Solusi Sistem Linear</strong><a class="headerlink" href="#definisi-1-1-5-solusi-sistem-linear" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Solusi Persamaan Linear:</strong> Sebuah <span class="math notranslate nohighlight">\(n\)</span>-tuple <span class="math notranslate nohighlight">\((s_1, s_2, \dots, s_n)\)</span> bilangan real yang jika ditugaskan ke variabel (<span class="math notranslate nohighlight">\(x_1 = s_1, x_2 = s_2, \dots\)</span>) membuat persamaan tersebut benar.</p></li>
+<li><p><strong>Solusi Sistem Persamaan Linear:</strong> Sebuah <span class="math notranslate nohighlight">\(n\)</span>-tuple yang merupakan solusi untuk <strong>setiap</strong> persamaan yang ada di dalam sistem tersebut.</p></li>
+</ul>
+<section id="jenis-jenis-himpunan-penyelesaian">
+<h3><strong>Jenis-Jenis Himpunan Penyelesaian</strong><a class="headerlink" href="#jenis-jenis-himpunan-penyelesaian" title="Link to this heading">#</a></h3>
+<p>Setiap sistem persamaan linear akan memiliki salah satu dari tiga kemungkinan solusi berikut:</p>
+<ol class="arabic simple">
+<li><p><strong>Tidak ada solusi:</strong> Himpunan penyelesaian kosong (Sistem <strong>tidak konsisten</strong>).</p></li>
+<li><p><strong>Tepat satu solusi:</strong> Himpunan penyelesaian hanya berisi satu elemen.</p></li>
+<li><p><strong>Tak terhingga banyaknya solusi:</strong> Himpunan penyelesaian mengandung elemen yang jumlahnya tidak terbatas.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="contoh-1-1-6-analisis-geometris">
+<h2><strong>Contoh 1.1.6: Analisis Geometris</strong><a class="headerlink" href="#contoh-1-1-6-analisis-geometris" title="Link to this heading">#</a></h2>
+<p>Secara intuitif, kita dapat melihat solusi sistem melalui geometri:</p>
+<ul class="simple">
+<li><p>Persamaan linear dengan <strong>dua variabel</strong> mendefinisikan sebuah <strong>garis</strong> dalam <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p></li>
+<li><p>Persamaan linear dengan <strong>tiga variabel</strong> mendefinisikan sebuah <strong>bidang</strong> dalam <span class="math notranslate nohighlight">\(\mathbb{R}^3\)</span>.</p></li>
+</ul>
+<p><strong>Contoh Sistem Dasar:</strong></p>
+<ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(x - y = 0\)</span> dan <span class="math notranslate nohighlight">\(x - y = 1\)</span> (Garis sejajar <span class="math notranslate nohighlight">\(\rightarrow\)</span> <strong>Tidak ada solusi</strong>).</p>
+ <p align="center">
+ <img src="satu.png" width="450">
+ </p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x - y = 0\)</span> dan <span class="math notranslate nohighlight">\(x + y = 1\)</span> (Garis berpotongan <span class="math notranslate nohighlight">\(\rightarrow\)</span> <strong>Satu solusi unik</strong>).</p>
+ <p align="center">
+ <img src="duabaru.png" width="450">
+ </p>
+</li>
+<li><p><span class="math notranslate nohighlight">\(x - y = 1\)</span> dan <span class="math notranslate nohighlight">\(2x - 2y = 2\)</span> (Garis berhimpit <span class="math notranslate nohighlight">\(\rightarrow\)</span> <strong>Solusi tak terhingga</strong>).</p>
+ <p align="center">
+ <img src="tigabaru.png" width="450">
+ </p>
+</li>
+</ol>
+<hr class="docutils" />
+<section id="a-sistem-pertama">
+<h3><strong>a. Sistem Pertama</strong><a class="headerlink" href="#a-sistem-pertama" title="Link to this heading">#</a></h3>
+<p>Persamaan yang diberikan:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(-8x - 7y = 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4x + 4y = 8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-16x - 13y = 25\)</span></p></li>
+</ol>
+<p><strong>Analisis:</strong></p>
+<ul class="simple">
+<li><p>Jika kita mengalikan persamaan (2) dengan 2, kita mendapatkan <span class="math notranslate nohighlight">\(8x + 8y = 16\)</span>.</p></li>
+<li><p>Menjumlahkan ini dengan persamaan (1): <span class="math notranslate nohighlight">\((-8x + 8x) + (-7y + 8y) = 3 + 16 \implies \mathbf{y = 19}\)</span>.</p></li>
+<li><p>Substitusi <span class="math notranslate nohighlight">\(y = 19\)</span> ke persamaan (2): <span class="math notranslate nohighlight">\(4x + 4(19) = 8 \implies 4x + 76 = 8 \implies 4x = -68 \implies \mathbf{x = -17}\)</span>.</p></li>
+<li><p>Sekarang, uji titik <span class="math notranslate nohighlight">\((-17, 19)\)</span> ke persamaan (3): <span class="math notranslate nohighlight">\(-16(-17) - 13(19) = 272 - 247 = \mathbf{25}\)</span>. Karena hasilnya sesuai dengan persamaan ketiga, sistem ini konsisten.</p></li>
+</ul>
+<p><strong>Kesimpulan:</strong> Memiliki <strong>solusi tunggal</strong> <span class="math notranslate nohighlight">\((x, y) = (-17, 19)\)</span>.</p>
+<hr class="docutils" />
+<p align="center">
+    <img src="contoh1.png" width="450">
+</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Matriks koefisien</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">13</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Vektor konstanta</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">25</span><span class="p">])</span>
+
+<span class="c1"># Least squares solution</span>
+<span class="n">solution</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">solution</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = -17.000000000000014
+y = 19.000000000000025
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="b-sistem-kedua">
+<h3><strong>b. Sistem Kedua</strong><a class="headerlink" href="#b-sistem-kedua" title="Link to this heading">#</a></h3>
+<p>Persamaan yang diberikan:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(-8x - 7y = 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4x + 4y = 8\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-16x - 13y = 27\)</span></p></li>
+</ol>
+<p><strong>Analisis:</strong></p>
+<ul class="simple">
+<li><p>Dua persamaan pertama identik dengan sistem (a), yang menghasilkan titik potong <span class="math notranslate nohighlight">\((-17, 19)\)</span>.</p></li>
+<li><p>Uji titik <span class="math notranslate nohighlight">\((-17, 19)\)</span> ke persamaan (3): <span class="math notranslate nohighlight">\(-16(-17) - 13(19) = \mathbf{25}\)</span>.</p></li>
+<li><p>Namun, persamaan ketiga dalam sistem ini menyatakan hasilnya haruslah <strong>27</strong>. Karena <span class="math notranslate nohighlight">\(25 \neq 27\)</span>, tidak ada titik yang memenuhi ketiga persamaan sekaligus.</p></li>
+</ul>
+<p><strong>Kesimpulan:</strong> <strong>Tidak memiliki solusi</strong>.</p>
+<hr class="docutils" />
+<p align="center">
+    <img src="kedua.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Matriks koefisien</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="o">-</span><span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">16</span><span class="p">,</span> <span class="o">-</span><span class="mi">13</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="c1"># Vektor konstanta</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">27</span><span class="p">])</span>
+
+<span class="c1"># Solusi least squares</span>
+<span class="n">solution</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">solution</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;residuals = </span><span class="si">{</span><span class="n">residuals</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = -17.92857142857144
+y = 20.000000000000025
+residuals = [0.28571429]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="c-sistem-ketiga">
+<h3><strong>c. Sistem Ketiga</strong><a class="headerlink" href="#c-sistem-ketiga" title="Link to this heading">#</a></h3>
+<p>Persamaan yang diberikan:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(25x - 15y = 10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(-15x + 9y = -6\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(30x - 18y = 12\)</span></p></li>
+</ol>
+<p><strong>Analisis:</strong></p>
+<ul class="simple">
+<li><p>Jika persamaan (1) dibagi 5, hasilnya adalah <span class="math notranslate nohighlight">\(\mathbf{5x - 3y = 2}\)</span>.</p></li>
+<li><p>Jika persamaan (2) dibagi -3, hasilnya adalah <span class="math notranslate nohighlight">\(\mathbf{5x - 3y = 2}\)</span>.</p></li>
+<li><p>Jika persamaan (3) dibagi 6, hasilnya adalah <span class="math notranslate nohighlight">\(\mathbf{5x - 3y = 2}\)</span>.</p></li>
+<li><p>Ketiga persamaan tersebut sebenarnya adalah garis yang sama.</p></li>
+</ul>
+<p><strong>Kesimpulan:</strong> Memiliki <strong>solusi tak terbatas</strong>.</p>
+<hr class="docutils" />
+<p align="center">
+    <img src="ketiga.png" width="450">
+</p><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="o">-</span><span class="mi">15</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="o">-</span><span class="mi">18</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">])</span>
+
+<span class="n">solution</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="n">rank</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">lstsq</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">,</span> <span class="n">rcond</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x = </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;y = </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;residuals = </span><span class="si">{</span><span class="n">residuals</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 0.29411764705882354
+y = -0.17647058823529416
+residuals = []
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="metode-penyelesaian-sistem-persamaan-linear">
+<h1>🧮 Metode Penyelesaian Sistem Persamaan Linear<a class="headerlink" href="#metode-penyelesaian-sistem-persamaan-linear" title="Link to this heading">#</a></h1>
+<hr class="docutils" />
+<section id="metode-substitusi">
+<h2>1. Metode Substitusi<a class="headerlink" href="#metode-substitusi" title="Link to this heading">#</a></h2>
+<section id="contoh-soal">
+<h3>Contoh Soal<a class="headerlink" href="#contoh-soal" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x + y = 5 \\
+x = 2
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="penyelesaian">
+<h3>Penyelesaian<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h3>
+<p>Substitusikan (x = 2) ke persamaan pertama:
+$<span class="math notranslate nohighlight">\(
+2 + y = 5
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+y = 3
+\)</span>$</p>
+</section>
+<section id="solusi">
+<h3>Solusi<a class="headerlink" href="#solusi" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+x = 2,\quad y = 3
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="metode-eliminasi">
+<h2>2. Metode Eliminasi<a class="headerlink" href="#metode-eliminasi" title="Link to this heading">#</a></h2>
+<section id="id3">
+<h3>Contoh Soal<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x + y = 5 \\
+x - y = 1
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="id4">
+<h3>Penyelesaian<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Jumlahkan kedua persamaan:
+$<span class="math notranslate nohighlight">\(
+(x + y) + (x - y) = 5 + 1
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+2x = 6 \Rightarrow x = 3
+\)</span>$</p>
+<p>Substitusi ke persamaan pertama:
+$<span class="math notranslate nohighlight">\(
+3 + y = 5 \Rightarrow y = 2
+\)</span>$</p>
+</section>
+<section id="id5">
+<h3>Solusi<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+x = 3,\quad y = 2
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="metode-matriks-eliminasi-gauss">
+<h2>3. Metode Matriks (Eliminasi Gauss)<a class="headerlink" href="#metode-matriks-eliminasi-gauss" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h3>Contoh Soal<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x + 2y = 8 \\
+3x - y = 1
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="bentuk-matriks-augmented">
+<h3>Bentuk Matriks Augmented<a class="headerlink" href="#bentuk-matriks-augmented" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{cc|c}
+1 &amp; 2 &amp; 8 \\
+3 &amp; -1 &amp; 1
+\end{array}
+\right]
+\end{split}\]</div>
+</section>
+<section id="operasi-baris">
+<h3>Operasi Baris<a class="headerlink" href="#operasi-baris" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\left[
+\begin{array}{cc|c}
+1 &amp; 2 &amp; 8 \\
+0 &amp; -7 &amp; -23
+\end{array}
+\right]
+\end{split}\]</div>
+</section>
+<section id="id7">
+<h3>Penyelesaian<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+-7y = -23 \Rightarrow y = \frac{23}{7}
+\]</div>
+<p>Substitusikan ke persamaan pertama:
+$<span class="math notranslate nohighlight">\(
+x + 2\left(\frac{23}{7}\right) = 8 \Rightarrow x = \frac{10}{7}
+\)</span>$</p>
+</section>
+<section id="id8">
+<h3>Solusi<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+x = \frac{10}{7},\quad y = \frac{23}{7}
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="aturan-cramer">
+<h2>4. Aturan Cramer<a class="headerlink" href="#aturan-cramer" title="Link to this heading">#</a></h2>
+<section id="id9">
+<h3>Contoh Soal<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x + y = 5 \\
+2x - y = 1
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="matriks-koefisien">
+<h3>Matriks Koefisien<a class="headerlink" href="#matriks-koefisien" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A =
+\begin{bmatrix}
+1 &amp; 1 \\
+2 &amp; -1
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="determinan">
+<h3>Determinan<a class="headerlink" href="#determinan" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\det(A) = (1)(-1) - (1)(2) = -3
+\]</div>
+</section>
+<section id="hitung-x-dan-y">
+<h3>Hitung (x) dan (y)<a class="headerlink" href="#hitung-x-dan-y" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x =
+\frac{
+\begin{vmatrix}
+5 &amp; 1 \\
+1 &amp; -1
+\end{vmatrix}
+}{-3}
+=\frac{-6}{-3}
+= 2
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+y =
+\frac{
+\begin{vmatrix}
+1 &amp; 5 \\
+2 &amp; 1
+\end{vmatrix}
+}{-3}
+=\frac{-9}{-3}
+= 3
+\end{split}\]</div>
+</section>
+<section id="id10">
+<h3>Solusi<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+x = 2,\quad y = 3
+\]</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="metode-numerik-iterasi-jacobi">
+<h2>5. Metode Numerik (Iterasi – Jacobi)<a class="headerlink" href="#metode-numerik-iterasi-jacobi" title="Link to this heading">#</a></h2>
+<section id="id11">
+<h3>Contoh Soal<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x = \dfrac{5 - y}{2} \\
+y = \dfrac{4 - x}{3}
+\end{cases}
+\end{split}\]</div>
+</section>
+<section id="iterasi-awal">
+<h3>Iterasi Awal<a class="headerlink" href="#iterasi-awal" title="Link to this heading">#</a></h3>
+<p>Ambil tebakan awal:
+$<span class="math notranslate nohighlight">\(
+x^{(0)} = 0,\quad y^{(0)} = 0
+\)</span>$</p>
+</section>
+<section id="iterasi-1">
+<h3>Iterasi 1<a class="headerlink" href="#iterasi-1" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+x^{(1)} = \dfrac{5 - 0}{2} = 2.5
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+y^{(1)} = \dfrac{4 - 0}{3} \approx 1.33
+\]</div>
+</section>
+<section id="iterasi-2">
+<h3>Iterasi 2<a class="headerlink" href="#iterasi-2" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+x^{(2)} = \dfrac{5 - 1.33}{2} \approx 1.835
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+y^{(2)} = \dfrac{4 - 2.5}{3} = 0.5
+\]</div>
+<p>Iterasi dilanjutkan hingga nilai <strong>konvergen</strong>.</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="representasi-matriks-eliminasi-gauss">
+<h1>📘 Representasi Matriks &amp; Eliminasi Gauss<a class="headerlink" href="#representasi-matriks-eliminasi-gauss" title="Link to this heading">#</a></h1>
+<section id="representasi-matriks">
+<h2>1. Representasi Matriks<a class="headerlink" href="#representasi-matriks" title="Link to this heading">#</a></h2>
+<p>Suatu sistem persamaan linear dapat direpresentasikan dalam bentuk matriks.</p>
+<p>Contoh sistem persamaan:
+[
+\begin{cases}
+x + 2y = 8 \
+3x - y = 1
+\end{cases}
+]</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; -1
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+8 \\
+1
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="matriks-augmented">
+<h2>2. Matriks Augmented<a class="headerlink" href="#matriks-augmented" title="Link to this heading">#</a></h2>
+<p>Untuk menyelesaikan sistem persamaan menggunakan <strong>metode Eliminasi Gauss</strong>, sistem diubah ke bentuk <strong>matriks augmented</strong>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; \mid &amp; 8 \\
+3 &amp; -1 &amp; \mid &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="eliminasi-gauss">
+<h2>3. Eliminasi Gauss<a class="headerlink" href="#eliminasi-gauss" title="Link to this heading">#</a></h2>
+<p>Eliminasi Gauss dilakukan dengan <strong>operasi baris elementer</strong> hingga diperoleh <strong>matriks eselon baris</strong>.</p>
+<section id="langkah-langkah-umum">
+<h3>Langkah-langkah umum:<a class="headerlink" href="#langkah-langkah-umum" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Menghilangkan elemen di bawah pivot (angka utama).</p></li>
+<li><p>Menjadikan matriks berbentuk segitiga atau eselon.</p></li>
+<li><p>Melakukan substitusi balik untuk mendapatkan nilai variabel.</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="tujuan-eliminasi-gauss">
+<h2>4. Tujuan Eliminasi Gauss<a class="headerlink" href="#tujuan-eliminasi-gauss" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Menyederhanakan sistem persamaan linear</p></li>
+<li><p>Menentukan solusi sistem (tunggal, banyak, atau tidak ada solusi)</p></li>
+<li><p>Mempermudah perhitungan pada sistem persamaan yang lebih besar</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan">
+<h2>5. Kesimpulan<a class="headerlink" href="#kesimpulan" title="Link to this heading">#</a></h2>
+<p>Metode Eliminasi Gauss adalah cara sistematis untuk menyelesaikan sistem persamaan linear dengan:</p>
+<ul class="simple">
+<li><p>Mengubah persamaan ke bentuk matriks</p></li>
+<li><p>Menggunakan operasi baris elementer</p></li>
+<li><p>Mendapatkan solusi secara terstruktur dan efisien</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="contoh-tahapan-penyelesaian">
+<h1>📘 Contoh Tahapan Penyelesaian<a class="headerlink" href="#contoh-tahapan-penyelesaian" title="Link to this heading">#</a></h1>
+<p><em>Sistem Persamaan Linear</em></p>
+<hr class="docutils" />
+<section id="sistem-persamaan-awal">
+<h2>Sistem Persamaan Awal<a class="headerlink" href="#sistem-persamaan-awal" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x_1 - x_2 + x_3 = 3 \\
+2x_1 + x_2 + 8x_3 = 18 \\
+4x_1 + 2x_2 - 3x_3 = -2
+\end{cases}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="tahap-1-menukar-urutan-persamaan">
+<h2>Tahap 1: Menukar Urutan Persamaan<a class="headerlink" href="#tahap-1-menukar-urutan-persamaan" title="Link to this heading">#</a></h2>
+<p>Kita dapat <strong>menukar persamaan pertama dengan persamaan terakhir</strong> agar lebih mudah dieliminasi.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+4x_1 + 2x_2 - 3x_3 = -2 \\
+2x_1 + x_2 + 8x_3 = 18 \\
+x_1 - x_2 + x_3 = 3
+\end{cases}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="tahap-2-mengalikan-persamaan">
+<h2>Tahap 2: Mengalikan Persamaan<a class="headerlink" href="#tahap-2-mengalikan-persamaan" title="Link to this heading">#</a></h2>
+<p>Kita dapat <strong>mengalikan persamaan pertama dengan 5</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+5x_1 - 5x_2 + 5x_3 = 15
+\]</div>
+<p>Sehingga sistem menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+5x_1 - 5x_2 + 5x_3 = 15 \\
+2x_1 + x_2 + 8x_3 = 18 \\
+4x_1 + 2x_2 - 3x_3 = -2
+\end{cases}
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="tahap-3-menjumlahkan-persamaan">
+<h2>Tahap 3: Menjumlahkan Persamaan<a class="headerlink" href="#tahap-3-menjumlahkan-persamaan" title="Link to this heading">#</a></h2>
+<p>Kita dapat <strong>menambahkan 2 kali persamaan pertama dengan persamaan terakhir</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+(4x_1 + 2x_2 - 3x_3) + 2(x_1 - x_2 + x_3)
+\]</div>
+<p>Hasilnya:</p>
+<div class="math notranslate nohighlight">
+\[
+6x_1 - x_3 = 4
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="sistem-persamaan-baru">
+<h2>Sistem Persamaan Baru<a class="headerlink" href="#sistem-persamaan-baru" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x_1 - x_2 + x_3 = 3 \\
+2x_1 + x_2 + 8x_3 = 18 \\
+6x_1 - x_3 = 4
+\end{cases}
+\end{split}\]</div>
+<hr class="docutils" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+
+<span class="c1"># ==============================</span>
+<span class="c1"># 1. Matriks Augmented Awal</span>
+<span class="c1"># ==============================</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">Matrix</span><span class="p">([</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span> <span class="mi">18</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks awal:&quot;</span><span class="p">)</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># ==============================</span>
+<span class="c1"># 2. Eliminasi elemen di bawah pivot pertama</span>
+<span class="c1">#    R2 = R2 - 2R1</span>
+<span class="c1">#    R3 = R3 - 4R1</span>
+<span class="c1"># ==============================</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Setelah eliminasi kolom pertama:&quot;</span><span class="p">)</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># ==============================</span>
+<span class="c1"># 3. Eliminasi elemen di bawah pivot kedua</span>
+<span class="c1">#    R3 = R3 - 2R2</span>
+<span class="c1"># ==============================</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Setelah eliminasi kolom kedua:&quot;</span><span class="p">)</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># ==============================</span>
+<span class="c1"># 4. Normalisasi pivot</span>
+<span class="c1">#    R2 = R2 / 3</span>
+<span class="c1">#    R3 = R3 / -19</span>
+<span class="c1"># ==============================</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">/</span> <span class="mi">3</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span> <span class="o">/</span> <span class="p">(</span><span class="o">-</span><span class="mi">19</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Setelah normalisasi pivot:&quot;</span><span class="p">)</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># ==============================</span>
+<span class="c1"># 5. Eliminasi ke atas (Gauss-Jordan)</span>
+<span class="c1"># ==============================</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>
+<span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">A</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="p">:]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks eselon baris tereduksi (RREF):&quot;</span><span class="p">)</span>
+<span class="n">sp</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks awal:
+⎡1  -1  1   3 ⎤
+⎢             ⎥
+⎢2  1   8   18⎥
+⎢             ⎥
+⎣4  2   -3  -2⎦
+
+Setelah eliminasi kolom pertama:
+⎡1  -1  1    3 ⎤
+⎢              ⎥
+⎢0  3   6   12 ⎥
+⎢              ⎥
+⎣0  6   -7  -14⎦
+
+Setelah eliminasi kolom kedua:
+⎡1  -1   1    3 ⎤
+⎢               ⎥
+⎢0  3    6   12 ⎥
+⎢               ⎥
+⎣0  0   -19  -38⎦
+
+Setelah normalisasi pivot:
+⎡1  -1  1  3⎤
+⎢           ⎥
+⎢0  1   2  4⎥
+⎢           ⎥
+⎣0  0   1  2⎦
+
+Matriks eselon baris tereduksi (RREF):
+⎡1  0  2  5⎤
+⎢          ⎥
+⎢0  1  0  0⎥
+⎢          ⎥
+⎣0  0  1  2⎦
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<section id="sistem-persamaan">
+<h3>1. Sistem Persamaan<a class="headerlink" href="#sistem-persamaan" title="Link to this heading">#</a></h3>
+<p>Kita mulai dengan tiga persamaan:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(x_1 - x_2 + x_3 = 3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_2 + 2x_3 = 4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x_3 = 2\)</span></p></li>
+</ol>
+</section>
+<section id="solusi-langkah-demi-langkah">
+<h3>2. Solusi Langkah-demi-Langkah<a class="headerlink" href="#solusi-langkah-demi-langkah" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Langkah 1: Mencari nilai <span class="math notranslate nohighlight">\(x_2\)</span></strong>
+Karena kita sudah tahu <span class="math notranslate nohighlight">\(x_3 = 2\)</span>, kita masukkan nilainya ke dalam persamaan kedua:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[x_2 + 2(2) = 4\]</div>
+<div class="math notranslate nohighlight">
+\[x_2 + 4 = 4\]</div>
+<p><strong>$<span class="math notranslate nohighlight">\(x_2 = 0\)</span>$</strong></p>
+<ul class="simple">
+<li><p><strong>Langkah 2: Mencari nilai <span class="math notranslate nohighlight">\(x_1\)</span></strong>
+Setelah mendapatkan <span class="math notranslate nohighlight">\(x_3 = 2\)</span> dan <span class="math notranslate nohighlight">\(x_2 = 0\)</span>, kita masukkan keduanya ke dalam persamaan pertama:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[x_1 - 0 + 2 = 3\]</div>
+<div class="math notranslate nohighlight">
+\[x_1 + 2 = 3\]</div>
+<p><strong>$<span class="math notranslate nohighlight">\(x_1 = 1\)</span>$</strong></p>
+</section>
+<hr class="docutils" />
+<section id="hasil-akhir">
+<h3>Hasil Akhir<a class="headerlink" href="#hasil-akhir" title="Link to this heading">#</a></h3>
+<p>Himpunan penyelesaian untuk sistem ini adalah:</p>
+<div class="math notranslate nohighlight">
+\[(x_1, x_2, x_3) = (1, 0, 2)\]</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="markdown.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SISTEM PERSAMAAN LINIER</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="markdown-notebooks.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">SISTEM PERSAMAAN LINEAR</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1 Sistem Persamaan Linear</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.1.1 Sistem Persamaan Linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-1-1-1-persamaan-linear"><strong>Definisi 1.1.1 Persamaan Linear</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-standar"><strong>Bentuk Standar</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-persamaan"><strong>Klasifikasi Persamaan</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-linier">1.1.2. Contoh Persamaan Linier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-linier-satu-variabel">1. Persamaan Linier Satu Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-linier-dua-variabel">2. Persamaan Linier Dua Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linier">3. Sistem Persamaan Linier</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-persamaan-nonlinier">Contoh Persamaan Nonlinier</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-nonlinier-satu-variabel">1. Persamaan Nonlinier Satu Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-nonlinier-dua-variabel">2. Persamaan Nonlinier Dua Variabel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-nonlinier-dengan-fungsi">3. Persamaan Nonlinier dengan Fungsi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-1-1-3-sistem-persamaan-linear"><strong>Definisi 1.1.3: Sistem Persamaan Linear</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-standar"><strong>Representasi Standar</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi-1-1-5-solusi-sistem-linear"><strong>Definisi 1.1.5: Solusi Sistem Linear</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-himpunan-penyelesaian"><strong>Jenis-Jenis Himpunan Penyelesaian</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-1-6-analisis-geometris"><strong>Contoh 1.1.6: Analisis Geometris</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-sistem-pertama"><strong>a. Sistem Pertama</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-sistem-kedua"><strong>b. Sistem Kedua</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-sistem-ketiga"><strong>c. Sistem Ketiga</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-penyelesaian-sistem-persamaan-linear">🧮 Metode Penyelesaian Sistem Persamaan Linear</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-substitusi">1. Metode Substitusi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-soal">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-eliminasi">2. Metode Eliminasi</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-matriks-eliminasi-gauss">3. Metode Matriks (Eliminasi Gauss)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-matriks-augmented">Bentuk Matriks Augmented</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-baris">Operasi Baris</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Penyelesaian</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aturan-cramer">4. Aturan Cramer</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-koefisien">Matriks Koefisien</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan">Determinan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-x-dan-y">Hitung (x) dan (y)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Solusi</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-numerik-iterasi-jacobi">5. Metode Numerik (Iterasi – Jacobi)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Contoh Soal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-awal">Iterasi Awal</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-1">Iterasi 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterasi-2">Iterasi 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-matriks-eliminasi-gauss">📘 Representasi Matriks &amp; Eliminasi Gauss</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representasi-matriks">1. Representasi Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-augmented">2. Matriks Augmented</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminasi-gauss">3. Eliminasi Gauss</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-langkah-umum">Langkah-langkah umum:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-eliminasi-gauss">4. Tujuan Eliminasi Gauss</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">5. Kesimpulan</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-tahapan-penyelesaian">📘 Contoh Tahapan Penyelesaian</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-awal">Sistem Persamaan Awal</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-1-menukar-urutan-persamaan">Tahap 1: Menukar Urutan Persamaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-2-mengalikan-persamaan">Tahap 2: Mengalikan Persamaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahap-3-menjumlahkan-persamaan">Tahap 3: Menjumlahkan Persamaan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-baru">Sistem Persamaan Baru</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan">1. Sistem Persamaan</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-langkah-demi-langkah">2. Solusi Langkah-demi-Langkah</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
