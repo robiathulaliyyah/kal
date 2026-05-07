@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"ce403cb459064f99aa127b73413e9e2c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "876c598ae9b142c7b48c8a4ea9d3b18e": {"model_name": "MPLCanvasModel", "model_module": "jupyter-matplotlib", "model_module_version": "^0.12", "state": {"_cursor": "pointer", "_data_url": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAYAAAC+ZpjcAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjcsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvTLEjVAAAAAlwSFlzAAAPYQAAD2EBqD+naQAAHmVJREFUeJzt3WuMFfXdwPEfFwFNBbUUEIpStd6qgoJQRGNsqCQaLC+aUjVAiZdarbGQVkAURKtYH2tIKkpErb6oBTVijBDUosRYaYggibaCUVSokVutLEUFhPNkJt0Ni4tF/e3i2fP5JCPM7Aw7+2fd82Vup02lUqkEAABp2ub9UQAACCwAgGbgCBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAECyqgysF154IYYPHx49e/aMNm3axBNPPPE/t1m8eHGcdtpp0bFjxzjmmGPiwQcfbJF9BQBqT1UG1tatW6Nv374xc+bMfVr/7bffjvPPPz/OOeecWLFiRfzqV7+KSy+9NJ5++ulm31cAoPa0qVQqlahixRGsefPmxYgRI/a6zoQJE2L+/Pnx2muvNSz76U9/Gh9++GEsXLiwhfYUAKgV7aMGLFmyJIYOHdpo2bBhw8ojWXuzbdu2cqq3a9eu+OCDD+Kb3/xmGXUAwL6pVCqxZcuW8tKetm2r8uTZF1YTgbVu3bro3r17o2XFfF1dXXz88cdx4IEHfmab6dOnx7Rp01pwLwGgdVu7dm18+9vfjlpQE4H1ZUyaNCnGjx/fML958+Y44ogjym+Ozp0779d9A4BqUldXF717946DDz44akVNBFaPHj1i/fr1jZYV80UoNXX0qlDcbVhMeyq2EVgA8MW1qaFLbGriROjgwYNj0aJFjZY9++yz5XIAgGxVGVj/+c9/ysctFFP9YxiK369Zs6bh9N7o0aMb1r/iiiti9erVce2118bKlSvj7rvvjkceeSTGjRu3374GAKD1qsrAevnll+PUU08tp0JxrVTx+ylTppTz77//fkNsFb7zne+Uj2kojloVz8/6/e9/H/fdd195JyEAQLaqfw5WS16g16VLl/Jid9dgAYDX0FZ3BAsA4OtMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkKxqA2vmzJnRp0+f6NSpUwwaNCiWLl36uevPmDEjjjvuuDjwwAOjd+/eMW7cuPjkk09abH8BgNpRlYE1d+7cGD9+fEydOjWWL18effv2jWHDhsWGDRuaXP/hhx+OiRMnluu//vrrcf/995d/xnXXXdfi+w4AtH5VGVh33nlnXHbZZTF27Ng48cQTY9asWXHQQQfFAw880OT6L730UgwZMiQuuuii8qjXueeeGxdeeOH/POoFAFATgbV9+/ZYtmxZDB06tGFZ27Zty/klS5Y0uc0ZZ5xRblMfVKtXr44FCxbEeeedt9fPs23btqirq2s0AQDsi/ZRZTZt2hQ7d+6M7t27N1pezK9cubLJbYojV8V2Z555ZlQqlfj000/jiiuu+NxThNOnT49p06al7z8A0PpV3RGsL2Px4sVx6623xt13311es/X444/H/Pnz4+abb97rNpMmTYrNmzc3TGvXrm3RfQYAqlfVHcHq2rVrtGvXLtavX99oeTHfo0ePJre54YYbYtSoUXHppZeW8yeffHJs3bo1Lr/88pg8eXJ5inFPHTt2LCcAgFZ/BKtDhw7Rv3//WLRoUcOyXbt2lfODBw9ucpuPPvroMxFVRFqhOGUIAFDTR7AKxSMaxowZEwMGDIiBAweWz7gqjkgVdxUWRo8eHb169SqvoyoMHz68vPPw1FNPLZ+Z9eabb5ZHtYrl9aEFAFDTgTVy5MjYuHFjTJkyJdatWxf9+vWLhQsXNlz4vmbNmkZHrK6//vpo06ZN+et7770X3/rWt8q4uuWWW/bjVwEAtFZtKs6R7ZPiMQ1dunQpL3jv3Llzc/+9AECrUVeDr6FVdw0WAMDXncACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLAAAgQUA8PXmCBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAAgsA4OvNESwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIVrWBNXPmzOjTp0906tQpBg0aFEuXLv3c9T/88MO46qqr4vDDD4+OHTvGscceGwsWLGix/QUAakf7qEJz586N8ePHx6xZs8q4mjFjRgwbNixWrVoV3bp1+8z627dvjx/+8Iflxx577LHo1atXvPvuu3HIIYfsl/0HAFq3NpVKpRJVpoiq008/Pe66665yfteuXdG7d++4+uqrY+LEiZ9Zvwix//u//4uVK1fGAQcc8KU+Z11dXXTp0iU2b94cnTt3/spfAwDUiroafA2tulOExdGoZcuWxdChQxuWtW3btpxfsmRJk9s8+eSTMXjw4PIUYffu3eOkk06KW2+9NXbu3NmCew4A1IqqO0W4adOmMoyKUNpdMV8coWrK6tWr47nnnouLL764vO7qzTffjCuvvDJ27NgRU6dObXKbbdu2ldPu9Q0A0CqPYH0ZxSnE4vqre++9N/r37x8jR46MyZMnl6cO92b69Onl4cz6qTgFCQDQKgOra9eu0a5du1i/fn2j5cV8jx49mtymuHOwuGuw2K7eCSecEOvWrStPOTZl0qRJ5bni+mnt2rXJXwkA0FpVXWB16NChPAq1aNGiRkeoivniOqumDBkypDwtWKxX74033ijDq/jzmlI8yqG4EG/3CQCgVQZWoXhEw+zZs+Ohhx6K119/PX7xi1/E1q1bY+zYseXHR48eXR6Bqld8/IMPPohrrrmmDKv58+eXF7kXF70DAEStX+ReKK6h2rhxY0yZMqU8zdevX79YuHBhw4Xva9asKe8srFdcP/X000/HuHHj4pRTTimfg1XE1oQJE/bjVwEAtFZV+Rys/aEWn+EBABnqavA1tCpPEQIAfJ0JLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkVRtYM2fOjD59+kSnTp1i0KBBsXTp0n3abs6cOdGmTZsYMWJEs+8jAFCbqjKw5s6dG+PHj4+pU6fG8uXLo2/fvjFs2LDYsGHD5273zjvvxK9//es466yzWmxfAYDaU5WBdeedd8Zll10WY8eOjRNPPDFmzZoVBx10UDzwwAN73Wbnzp1x8cUXx7Rp0+Koo45q0f0FAGpL1QXW9u3bY9myZTF06NCGZW3bti3nlyxZstftbrrppujWrVtccskl+/R5tm3bFnV1dY0mAIBWGVibNm0qj0Z179690fJift26dU1u8+KLL8b9998fs2fP3ufPM3369OjSpUvD1Lt376+87wBAbai6wPqitmzZEqNGjSrjqmvXrvu83aRJk2Lz5s0N09q1a5t1PwGA1qN9VJkiktq1axfr169vtLyY79Gjx2fWf+utt8qL24cPH96wbNeuXeWv7du3j1WrVsXRRx/9me06duxYTgAArf4IVocOHaJ///6xaNGiRsFUzA8ePPgz6x9//PHx6quvxooVKxqmCy64IM4555zy9079AQBR60ewCsUjGsaMGRMDBgyIgQMHxowZM2Lr1q3lXYWF0aNHR69evcrrqIrnZJ100kmNtj/kkEPKX/dcDgBQs4E1cuTI2LhxY0yZMqW8sL1fv36xcOHChgvf16xZU95ZCACwP7SpVCqV/fKZq0zxmIbibsLigvfOnTvv790BgKpRV4OvoQ7zAAAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACSr2sCaOXNm9OnTJzp16hSDBg2KpUuX7nXd2bNnx1lnnRWHHnpoOQ0dOvRz1wcAqLnAmjt3bowfPz6mTp0ay5cvj759+8awYcNiw4YNTa6/ePHiuPDCC+P555+PJUuWRO/evePcc8+N9957r8X3HQBo/dpUKpVKVJniiNXpp58ed911Vzm/a9euMpquvvrqmDhx4v/cfufOneWRrGL70aNH79PnrKuriy5dusTmzZujc+fOX/lrAIBaUVeDr6FVdwRr+/btsWzZsvI0X722bduW88XRqX3x0UcfxY4dO+Kwww5rxj0FAGpV+6gymzZtKo9Ade/evdHyYn7lypX79GdMmDAhevbs2SjS9rRt27Zy2r2+AQBa5RGsr+q2226LOXPmxLx588oL5Pdm+vTp5eHM+qk4BQkA0CoDq2vXrtGuXbtYv359o+XFfI8ePT532zvuuKMMrGeeeSZOOeWUz1130qRJ5bni+mnt2rUp+w8AtH5VF1gdOnSI/v37x6JFixqWFRe5F/ODBw/e63a333573HzzzbFw4cIYMGDA//w8HTt2LC/E230CAGiV12AVikc0jBkzpgylgQMHxowZM2Lr1q0xduzY8uPFnYG9evUqT/MVfve738WUKVPi4YcfLp+dtW7dunL5N77xjXICAIhaD6yRI0fGxo0by2gqYqlfv37lkan6C9/XrFlT3llY75577invPvzxj3/c6M8pnqN14403tvj+AwCtW1U+B2t/qMVneABAhroafA2tumuwAAC+7gQWAEAygQUAkExgAQAkE1gAAMkEFgBAMoEFAJBMYAEAJBNYAADJBBYAQDKBBQCQTGABACQTWAAAyQQWAEAygQUAkExgAQAILACArzdHsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJJVbWDNnDkz+vTpE506dYpBgwbF0qVLP3f9Rx99NI4//vhy/ZNPPjkWLFjQYvsKANSWqgysuXPnxvjx42Pq1KmxfPny6Nu3bwwbNiw2bNjQ5PovvfRSXHjhhXHJJZfEK6+8EiNGjCin1157rcX3HQBo/dpUKpVKVJniiNXpp58ed911Vzm/a9eu6N27d1x99dUxceLEz6w/cuTI2Lp1azz11FMNy77//e9Hv379YtasWfv0Oevq6qJLly6xefPm6Ny5c+JXAwCtW10Nvoa2jyqzffv2WLZsWUyaNKlhWdu2bWPo0KGxZMmSJrcplhdHvHZXHPF64okn9vp5tm3bVk71im+K+m8SAGDf1f33tbMKj+nUTmBt2rQpdu7cGd27d2+0vJhfuXJlk9usW7euyfWL5Xszffr0mDZt2meWF0fKAIAv7l//+ld5JKsWVF1gtZTiCNnuR70+/PDDOPLII2PNmjU1883xdfgXTxG0a9eurZlDyvubMTfmtcD3ecvbvHlzHHHEEXHYYYdFrai6wOratWu0a9cu1q9f32h5Md+jR48mtymWf5H1Cx07diynPRVx5cW+ZRXjbcyNeWvn+9yY14K2bavy3rovpeq+0g4dOkT//v1j0aJFDcuKi9yL+cGDBze5TbF89/ULzz777F7XBwCoqSNYheLU3ZgxY2LAgAExcODAmDFjRnmX4NixY8uPjx49Onr16lVeR1W45ppr4uyzz47f//73cf7558ecOXPi5ZdfjnvvvXc/fyUAQGtUlYFVPHZh48aNMWXKlPJC9eJxCwsXLmy4kL24Tmr3w5BnnHFGPPzww3H99dfHddddF9/97nfLOwhPOumkff6cxenC4rlbTZ02pHkY85ZnzI15LfB9bsxbQlU+BwsA4Ous6q7BAgD4uhNYAADJBBYAQDKBBQCQTGDtZubMmdGnT5/o1KlT+YbSS5cu/dzBe/TRR+P4448v1z/55JNjwYIF2X8/rd4XGfPZs2fHWWedFYceemg5Fe8/+b/+jvhqY7674vEmbdq0iREjRhjWZh7z4p0jrrrqqjj88MPLO96OPfZYP1+aecyLx/0cd9xxceCBB5bvIDFu3Lj45JNPvuinrVkvvPBCDB8+PHr27Fn+nHjic97rt97ixYvjtNNOK7/HjznmmHjwwQejVSnuIqRSmTNnTqVDhw6VBx54oPL3v/+9ctlll1UOOeSQyvr165scnr/+9a+Vdu3aVW6//fbKP/7xj8r1119fOeCAAyqvvvqq4WymMb/ooosqM2fOrLzyyiuV119/vfKzn/2s0qVLl8o///lPY95MY17v7bffrvTq1aty1llnVX70ox8Z72Yc823btlUGDBhQOe+88yovvvhiOfaLFy+urFixwrg305j/6U9/qnTs2LH8tRjvp59+unL44YdXxo0bZ8z30YIFCyqTJ0+uPP7448WTCSrz5s373PVXr15dOeiggyrjx48vX0P/8Ic/lK+pCxcubDVjLrD+a+DAgZWrrrqqYWB27txZ6dmzZ2X69OlNDtxPfvKTyvnnn99o2aBBgyo///nPm/Pvq6bHfE+ffvpp5eCDD6489NBDzbiXrcuXGfNinM8444zKfffdVxkzZozAauYxv+eeeypHHXVUZfv27V/0U/Elx7xY9wc/+EGjZcUL/5AhQ4zpl7AvgXXttddWvve97zVaNnLkyMqwYcNazZg7RRgR27dvj2XLlpWnnOoVDyot5pcsWdLkkb9i+e7rF4YNG7bX9fnqY76njz76KHbs2FFTbx66P8b8pptuim7dusUll1zSQnta22P+5JNPlm/jVZwiLB6eXDwQ+dZbb42dO3e24J7X1pgXD6Mutqk/jbh69erylOx5553XYvtda5bUwGtoVT7JPdumTZvKH171T4KvV8yvXLmyyW2KJ8g3tX6xnOYZ8z1NmDChPN+/5/+k5I35iy++GPfff3+sWLHCsLbQmBcv7s8991xcfPHF5Yv8m2++GVdeeWX5j4ni3STIH/OLLrqo3O7MM88szurEp59+GldccUX5zh80j3V7eQ2tq6uLjz/+uLwWrto5gkVVuu2228qLrufNm1dexEq+LVu2xKhRo8qbC7p27WqIW0jx5vXFEcPivVKLN7Yv3hps8uTJMWvWLH8HzaS42Lo4Snj33XfH8uXL4/HHH4/58+fHzTffbMz50hzBiihfPNq1axfr169vNDjFfI8ePZocuGL5F1mfrz7m9e64444ysP7yl7/EKaecYmibaczfeuuteOedd8o7g3Z/8S+0b98+Vq1aFUcffbTxTxzzQnHn4AEHHFBuV++EE04o/8VfnP7q0KGDMU8e8xtuuKH8x8Sll15azhd3hW/dujUuv/zyMm53f29bcvTYy2to586dW8XRq4LvmojyB1bxL8VFixY1eiEp5otrIZpSLN99/cKzzz671/X56mNeuP3228t/VRZv7j1gwADD2oxjXjyC5NVXXy1PD9ZPF1xwQZxzzjnl74tb2ckd88KQIUPK04L1MVt44403yvASV/nf5/XXc+4ZUfWB6+16m8fgWngN3d9X2X+dbustbtN98MEHy1tGL7/88vK23nXr1pUfHzVqVGXixImNHtPQvn37yh133FE+MmDq1Kke09DMY37bbbeVt14/9thjlffff79h2rJlS843QQ34omO+J3cRNv+Yr1mzprw79pe//GVl1apVlaeeeqrSrVu3ym9/+9sv8dlr0xcd8+LndzHmf/7zn8vHBzzzzDOVo48+urxbnH1T/BwuHqFTTEVa3HnnneXv33333fLjxXgX477nYxp+85vflK+hxSN4PKahFSuew3HEEUeUL+LFbb5/+9vfGj529tlnly8uu3vkkUcqxx57bLl+cbvp/Pnz98Ne186YH3nkkeX/uHtOxQ9HmmfM9ySwWmbMX3rppfKxL0UkFI9suOWWW8rHZdA8Y75jx47KjTfeWEZVp06dKr17965ceeWVlX//+9+GfB89//zzTf58HvPfcS5+LcZ9z2369etX/h0V3+d//OMfW9V4tyn+s7+PogEAtCauwQIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIJnAAgBIJrAAAJIJLACAZAILACCZwAIASCawAACSCSwAgGQCCwAgmcACAEgmsAAAkgksAIBkAgsAIHL9P+hgS74bCkm7AAAAAElFTkSuQmCC", "_dom_classes": [], "_figure_label": "Figure", "_image_mode": "full", "_message": "", "_model_module": "jupyter-matplotlib", "_model_module_version": "^0.12", "_model_name": "MPLCanvasModel", "_rubberband_height": 0, "_rubberband_width": 0, "_rubberband_x": 0, "_rubberband_y": 0, "_size": [600.0, 600.0], "_view_count": null, "_view_module": "jupyter-matplotlib", "_view_module_version": "^0.12", "_view_name": "MPLCanvasView", "capture_scroll": false, "footer_visible": true, "header_visible": true, "layout": "IPY_MODEL_ce403cb459064f99aa127b73413e9e2c", "pan_zoom_throttle": 33.0, "resizable": true, "tabbable": null, "toolbar": "IPY_MODEL_a9e6794b22304077a17bcdec0f3e7015", "toolbar_position": "left", "toolbar_visible": "fade-in-fade-out", "tooltip": null}}, "c4e274ead6df4213bace1ef3744e05e8": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a9e6794b22304077a17bcdec0f3e7015": {"model_name": "ToolbarModel", "model_module": "jupyter-matplotlib", "model_module_version": "^0.12", "state": {"_current_action": "", "_dom_classes": [], "_model_module": "jupyter-matplotlib", "_model_module_version": "^0.12", "_model_name": "ToolbarModel", "_view_count": null, "_view_module": "jupyter-matplotlib", "_view_module_version": "^0.12", "_view_name": "ToolbarView", "button_style": "", "collapsed": true, "layout": "IPY_MODEL_c4e274ead6df4213bace1ef3744e05e8", "orientation": "vertical", "tabbable": null, "toolitems": [["Home", "Reset original view", "home", "home"], ["Back", "Back to previous view", "arrow-left", "back"], ["Forward", "Forward to next view", "arrow-right", "forward"], ["Pan", "Left button pans, Right button zooms\nx/y fixes axis, CTRL fixes aspect", "arrows", "pan"], ["Zoom", "Zoom to rectangle\nx/y fixes axis", "square-o", "zoom"], ["Download", "Download plot", "floppy-o", "save_figure"]], "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugasgrafik';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Komputasi Aljabar Linear
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">SISTEM PERSAMAAN LINIER</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">SISTEM PERSAMAAN LINEAR</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1"><a class="reference internal" href="catatan.html">SISTEM PERSAMAAN LINEAR</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="matrix.html">MENCARI A invers matrix</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="determinan.html">A. Hitunglah determinan matrik berikut dengan menggunakan rumus expansi baris</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="transformasi.html">TUGAS MEMBUAT MATRIK TRANFORMASI</a></li>
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftugasgrafik.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/tugasgrafik.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">matplotlib</span> <span class="n">ipympl</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in c:\python313\lib\site-packages (3.10.7)
+Requirement already satisfied: ipympl in c:\python313\lib\site-packages (0.10.0)
+Requirement already satisfied: contourpy&gt;=1.0.1 in c:\python313\lib\site-packages (from matplotlib) (1.3.3)
+Requirement already satisfied: cycler&gt;=0.10 in c:\python313\lib\site-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in c:\python313\lib\site-packages (from matplotlib) (4.60.1)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in c:\python313\lib\site-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: numpy&gt;=1.23 in c:\python313\lib\site-packages (from matplotlib) (2.3.5)
+Requirement already satisfied: packaging&gt;=20.0 in c:\users\acer\appdata\roaming\python\python313\site-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow&gt;=8 in c:\python313\lib\site-packages (from matplotlib) (12.0.0)
+Requirement already satisfied: pyparsing&gt;=3 in c:\python313\lib\site-packages (from matplotlib) (3.2.5)
+Requirement already satisfied: python-dateutil&gt;=2.7 in c:\users\acer\appdata\roaming\python\python313\site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: ipython&lt;10 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipympl) (9.5.0)
+Requirement already satisfied: ipywidgets&lt;9,&gt;=7.6.0 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipympl) (8.1.7)
+Requirement already satisfied: traitlets&lt;6 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipympl) (5.14.3)
+Requirement already satisfied: colorama in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (0.4.6)
+Requirement already satisfied: decorator in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (1.1.1)
+Requirement already satisfied: jedi&gt;=0.16 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (0.19.2)
+Requirement already satisfied: matplotlib-inline in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (0.1.7)
+Requirement already satisfied: prompt_toolkit&lt;3.1.0,&gt;=3.0.41 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (3.0.52)
+Requirement already satisfied: pygments&gt;=2.4.0 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (2.19.2)
+Requirement already satisfied: stack_data in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipython&lt;10-&gt;ipympl) (0.6.3)
+Requirement already satisfied: comm&gt;=0.1.3 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipywidgets&lt;9,&gt;=7.6.0-&gt;ipympl) (0.2.3)
+Requirement already satisfied: widgetsnbextension~=4.0.14 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipywidgets&lt;9,&gt;=7.6.0-&gt;ipympl) (4.0.14)
+Requirement already satisfied: jupyterlab_widgets~=3.0.15 in c:\users\acer\appdata\roaming\python\python313\site-packages (from ipywidgets&lt;9,&gt;=7.6.0-&gt;ipympl) (3.0.15)
+Requirement already satisfied: wcwidth in c:\users\acer\appdata\roaming\python\python313\site-packages (from prompt_toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython&lt;10-&gt;ipympl) (0.2.13)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.4 in c:\users\acer\appdata\roaming\python\python313\site-packages (from jedi&gt;=0.16-&gt;ipython&lt;10-&gt;ipympl) (0.8.5)
+Requirement already satisfied: six&gt;=1.5 in c:\users\acer\appdata\roaming\python\python313\site-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.17.0)
+Requirement already satisfied: executing&gt;=1.2.0 in c:\users\acer\appdata\roaming\python\python313\site-packages (from stack_data-&gt;ipython&lt;10-&gt;ipympl) (2.2.1)
+Requirement already satisfied: asttokens&gt;=2.1.0 in c:\users\acer\appdata\roaming\python\python313\site-packages (from stack_data-&gt;ipython&lt;10-&gt;ipympl) (3.0.0)
+Requirement already satisfied: pure-eval in c:\users\acer\appdata\roaming\python\python313\site-packages (from stack_data-&gt;ipython&lt;10-&gt;ipympl) (0.2.3)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 25.3 -&gt; 26.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> widget
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.animation</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">animation</span>
+
+<span class="c1"># titik dari gambar</span>
+<span class="n">points</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;A&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;B&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;D&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="s2">&quot;E&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;F&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;G&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">),</span> <span class="s2">&quot;H&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">),</span>
+    <span class="s2">&quot;I&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;J&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;L&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="s2">&quot;M&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;N&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;O&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;P&quot;</span><span class="p">:</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># kelompok kotak</span>
+<span class="n">boxes</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;I&quot;</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">,</span> <span class="s2">&quot;I&quot;</span><span class="p">],</span>
+    <span class="p">[</span><span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;O&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">frame</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+
+    <span class="c1"># transformasi mendekati sumbu x</span>
+    <span class="n">scale_y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">frame</span> <span class="o">/</span> <span class="mi">100</span>
+
+    <span class="n">transformed</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># ubah posisi titik</span>
+    <span class="k">for</span> <span class="n">nama</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">points</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">y_baru</span> <span class="o">=</span> <span class="n">y</span> <span class="o">*</span> <span class="n">scale_y</span>
+        <span class="n">transformed</span><span class="p">[</span><span class="n">nama</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_baru</span><span class="p">)</span>
+
+    <span class="c1"># gambar kotak</span>
+    <span class="k">for</span> <span class="n">box</span> <span class="ow">in</span> <span class="n">boxes</span><span class="p">:</span>
+        <span class="n">x_vals</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">y_vals</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">titik</span> <span class="ow">in</span> <span class="n">box</span><span class="p">:</span>
+            <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">transformed</span><span class="p">[</span><span class="n">titik</span><span class="p">]</span>
+            <span class="n">x_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="n">y_vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+        <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_vals</span><span class="p">,</span> <span class="n">y_vals</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c1"># gambar titik + nama</span>
+    <span class="k">for</span> <span class="n">nama</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="n">transformed</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">y</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">nama</span><span class="p">)</span>
+
+    <span class="c1"># sumbu</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Transformasi Mendekati Sumbu X&quot;</span><span class="p">)</span>
+
+<span class="c1"># simpan animasi ke variabel</span>
+<span class="n">ani</span> <span class="o">=</span> <span class="n">animation</span><span class="o">.</span><span class="n">FuncAnimation</span><span class="p">(</span>
+    <span class="n">fig</span><span class="p">,</span>
+    <span class="n">update</span><span class="p">,</span>
+    <span class="n">frames</span><span class="o">=</span><span class="mi">101</span><span class="p">,</span>
+    <span class="n">interval</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+    <span class="n">repeat</span><span class="o">=</span><span class="kc">True</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "876c598ae9b142c7b48c8a4ea9d3b18e"}</script></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
