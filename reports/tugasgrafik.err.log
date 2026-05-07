@@ -46,6 +46,6 @@ Here is a preview of the cell contents:
 -------------------
 ['%matplotlib inline', '', 'import matplotlib.pyplot as plt', 'import matplotlib.animation as animation', 'from IPython.display import HTML']
 ...
-['', 'with open("animasi_transformasi.html", "w") as f:', '    f.write(html_animasi)', '', 'print("File HTML berhasil dibuat")']
+['    repeat=True', ')', '', 'HTML(ani.to_jshtml())', 'ani.save("animasi.gif", writer="pillow")']
 -------------------
 
